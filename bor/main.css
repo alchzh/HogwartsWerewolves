@@ -1,0 +1,63 @@
+body {
+    background-color: #000;
+    height: 100%;
+    width: auto;
+    top: 0;
+    left: 0;
+    margin: 0, 0, 0, 0;
+    padding: 0;
+}
+.page{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;    z-index:1000;
+}
+.name {
+    font-family: 'Tangerine';
+    color: darkgrey;
+    text-align: center;
+    font-size: 500%;
+    font-weight: 700;
+    margin-top: 13%;
+}
+.text {
+    font-family: 'Tangerine';
+    margin-top: -5%;
+    top: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 50px;
+    text-align: center;
+    color: darkgrey;
+}
+.number {
+    font-size: 175%;
+    font-weight: 400;
+    margin-right: -5px;
+}
+.arrow{
+    font-size:700%;
+    left: 50%;
+    width:97px;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0.02;
+    transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition-property: opacity;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0ms;
+    position: fixed;
+}
+.arrow:hover{
+    opacity: .2;
+    cursor: hand;
+    cursor: pointer;
+}
+.arrow.up{
+    top: 30px;
+}
+.arrow.left{
+    bottom: 30px;
+}

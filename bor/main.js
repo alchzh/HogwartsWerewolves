@@ -1,13 +1,25 @@
+var page = 1;
+
+
 $(document).ready(function() {
-    $('html body').scrollTop($('.first').offset().top);
-    $('#down').click( function() {
-        $('html,body').animate({
-           scrollTop: $(".second").offset().top
-        },500);
-    });
-    $('#up').click( function() {
-        $('html,body').animate({
-           scrollTop: $(".first").offset().top
-        },500);
-    });
+    $('#down').click(moveDown);
+    $('#up').click(moveUp);
 });
+
+function moveDown() {
+    if (page < $('ul li').length){
+        page += 1;
+        $('html,body').animate({
+           scrollTop: $('ul li:nth-child(2)').position().top
+        },500);
+    };
+};
+
+function moveUp() {
+    if (page > 1){
+        page -= 1;
+        $('html,body').animate({
+           scrollTop: $('ul li:nth-child(' + page.toString() + ')').offset().top
+        },500);
+    }; 
+};

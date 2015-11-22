@@ -33,6 +33,9 @@ body {
     font-weight: 400;
     margin-right: -5px;
 }
+.four {
+    font-size: 150%;
+}
 .arrow{
     font-size:350%;
     left: 50%;

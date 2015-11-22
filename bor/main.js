@@ -10,7 +10,7 @@ function moveDown() {
     if (page < $('ul li').length){
         page += 1;
         $('html,body').animate({
-           scrollTop: $('ul li:nth-child(2)').position().top
+           scrollTop: $('ul li:nth-child(' + page.toString() + ')').offset().top
         },500);
     };
 };

@@ -3,21 +3,23 @@ body {
     width: auto;
     overflow: hidden;
 }
-li{
+
+li {
     height: 100vh;
     width: auto;
     top: 0;
     left: 0;
     margin-top: -12vh;
 }
+
 li p:nth-child(1) {
     font-family: 'Tangerine';
     color: darkgrey;
     text-align: center;
     font-size: 500%;
     font-weight: 700;
-    padding-top: 23vh;
 }
+
 li p:nth-child(2) {
     font-family: 'Tangerine';
     margin-top: -5%;
@@ -28,18 +30,21 @@ li p:nth-child(2) {
     text-align: center;
     color: darkgrey;
 }
+
 .number {
     font-size: 175%;
     font-weight: 400;
     margin-right: -5px;
 }
+
 .four {
     font-size: 150%;
 }
-.arrow{
-    font-size:350%;
+
+.arrow {
+    font-size: 350%;
     left: 50%;
-    width:43.5px;
+    width: 43.5px;
     transform: translateX(-50%);
     position: absolute;
     opacity: 0.1;
@@ -50,15 +55,30 @@ li p:nth-child(2) {
     transition-delay: 0ms;
     position: fixed;
 }
-.arrow:hover{
+
+.arrow:hover {
     opacity: .6;
     cursor: hand;
     cursor: pointer;
 }
-.arrow#up{
+
+.arrow#up {
     top: 30px;
 }
-.arrow#down{
+
+.arrow#down {
     bottom: 30px;
 }
-.second{top:200%}
+
+.second {
+    top: 200%
+}
+
+.long {
+    font-size: 40px !important;
+}
+li div:nth-child(1) {
+    position: relative;
+    top: 47%;
+    transform: translateY(-53%);
+}

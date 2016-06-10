@@ -18,10 +18,7 @@ context = {
     'data': data
 }
 
-html = ""
-
-with open(fname, 'r') as f:
-    html = render_template('index-template.html', context)
+html = render_template('index-template.html', context)
 
 with open(fname, 'w+') as f:
     f.write(html.replace("1</span>th","1</span>st").replace("2</span>th","2</span>nd").replace("3</span>th","3</span>rd"))

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bill of Rights</title>
+    <link rel="stylesheet" type="text/css" href="static/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="static/main.js"></script>
+</head>
+
+<body>
+    <ul id="pages">
+        {% for value in data %}
+            <li>
+                <div>
+                    <p>The <span class="number">{{loop.index}}</span>th Amendment</p>
+                    <p>{{value}}</p>
+                </div>
+            </li>
+        {% endfor %}        
+    </ul>
+    <div class="arrow" id="down"><i class="fa fa-chevron-circle-down fa-inverse"></i></div>
+    <div class="arrow" id="up"><i class="fa fa-chevron-circle-up  fa-inverse"></i></div>
+</body>
+
+</html>

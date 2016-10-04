@@ -47,7 +47,7 @@ li p:nth-child(2) {
     width: 43.5px;
     transform: translateX(-50%);
     position: absolute;
-    opacity: 0.1;
+    opacity: 0.2;
     transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     transition-property: opacity;
     transition-duration: 300ms;

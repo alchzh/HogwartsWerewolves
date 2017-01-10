@@ -1,5 +1,5 @@
 /*global $ */
-"use scrict";
+"use strict";
 
 var scroll = true;
 

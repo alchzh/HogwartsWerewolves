@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.0.0-rc3.json",
+  "description": "Game X Comment Totals",
+  "vconcat": [{
+    "title": "Game A",
+    "data": {"url": "a.json"},
+    "mark": "bar",
+    "height": 600,
+    "padding": 0,
+    "autosize": "pad",
+    "encoding": {
+      "x": {
+        "field": "phase",
+        "type": "ordinal",
+        "scale": {"rangeStep": 70},
+        "axis": {"title": "Phase"},
+        "sort": {"field": "phase_id"}
+      },
+      "y": {
+        "aggregate": "sum",
+        "field": "comments",
+        "type": "quantitative",
+        "axis": {"title": "Comments"}
+      },
+      "color": {"field": "player","type": "nominal","legend": null},
+      "opacity": {"value": 0.7},
+      "size": {"value": 69.5}
+    }
+  },
+  {
+    "title": "Game B",
+    "data": {"url": "b.json"},
+    "mark": "bar",
+    "height": 600,
+    "padding": 0,
+    "autosize": "pad",
+    "encoding": {
+      "x": {
+        "field": "phase_id",
+        "type": "ordinal",
+        "scale": {"rangeStep": 70},
+        "axis": {"title": "Phase"}
+      },
+      "y": {
+        "aggregate": "sum",
+        "field": "comments",
+        "type": "quantitative",
+        "axis": {"title": "Comments"}
+      },
+      "color": {"field": "player","type": "nominal","legend": null},
+      "opacity": {"value": 0.7},
+      "size": {"value": 69.5}
+    }
+  }]
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Comment Visualization for HWWW 2017 Game 5.B</title>
+    <!-- Dependencies -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.2/vega.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.0-rc3/vega-lite.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-beta.20/vega-embed.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.4.4/vega-tooltip.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.4.4/vega-tooltip.min.css">
+  </head>
+  <body>
+    <div id="vis"></div>
+    <script>
+      var opt = {
+        mode: "vega-lite"
+      };
+      vega.embed("#vis", "stack.json", opt)
+        .then(function (result) {
+          vegaTooltip.vegaLite(result.view, result.spec, {
+            showAllFields: false,
+            fields: [{field:"player", title:"Player"}, {field:"sum_comments", title:"Comment Count"}]
+          });
+      });
+    </script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      
+      /* Hide Vega action links */
+      .vega-actions {
+        display: none;
+      }
+      
+      #vis canvas{
+        margin: auto;
+        display: block;
+      }
+    </style>
+  </body>
+</html>
